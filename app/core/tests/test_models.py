@@ -78,6 +78,6 @@ class ModelTest(TestCase):
         """ Test image is saved in correct location"""
         uuid = 'test-uuid'
         mock_uuid.return_value = uuid
-        file_path = models.recipe_image_file_path(None, '1234myimage.jpeg')
-        exp_path = f'uploads/recipe/{uuid}.jpeg'
+        file_path = models.recipe_image_file_path(None, '1234myimage.jpg')
+        exp_path = f'uploads/recipe/{uuid}.jpg'
         self.assertEqual(file_path, exp_path)
